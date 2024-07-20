@@ -1,10 +1,10 @@
 // User model file to store and manage user information
 
-// Import important parts of sequelize library
+// Import Sequelize Model and DataTypes
 const { Model, DataTypes } = require('sequelize');
 // Import bcrypt for password hashing
 const bcrypt = require('bcrypt');
-// Import database connection
+// Import Sequelize database connection instance
 const sequelize = require('../config/connection');
 
 // Create User model
@@ -16,33 +16,26 @@ class User extends Model {
   }
 }
 
-// Create fields/columns for User model
+// Create fields/columns for User model and initialize the User model
 User.init(
   {
-    // Define columns
+    // Define model's columns
     id: {
-      // Use the special Sequelize DataTypes object to provide what type of data it is (Integer)
-      type: DataTypes.INTEGER,
-      // Doesn't allow null values
-      allowNull: false,
-      // Instruct that this is the Primary Key
-      primaryKey: true,
-      // Turn on auto increment
-      autoIncrement: true,
+      type: DataTypes.INTEGER, // Integer data type for the id
+      allowNull: false, // This field cannot be null
+      primaryKey: true, // This field is the primary key
+      autoIncrement: true, // This field auto-increments
     },
     username: {
-      // Use the special Sequelize DataTypes object to provide what type of data it is (String)
-      type: DataTypes.STRING,
-      // This field must be unique (prevents duplicate usernames in database)
-      unique: true,
+      type: DataTypes.STRING, // String data type for the username
+      unique: true, // This field must be unique (prevents duplicate usernames in database)
       allowNull: false,
     },
     password: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, // String data type for the password
       allowNull: false,
-      // Validate that the password is at least 8 characters long
       validate: {
-        len: [8],
+        len: [8], // Validate that the password is at least 8 characters long
       },
     },
   },
@@ -60,16 +53,12 @@ User.init(
         return updatedUserData;
       },
     },
-    // Pass in our imported sequelize connection (the direct connection to our database)
-    sequelize,
-    // Don't add timestamp attributes (updatedAt, createdAt)
-    timestamps: false,
-    // Don't pluralize name of database table
-    freezeTableName: true,
-    // Use snake_case (spaces replaced with underscores) for column names instead of camelCase
-    underscored: true,
-    // Define model name
-    modelName: 'user',
+    // Define model options
+    sequelize, // Pass the sequelize instance
+    timestamps: false, // Disable automatic createdAt and updatedAt fields
+    freezeTableName: true, // Prevent Sequelize from pluralizing table names
+    underscored: true, // Use snake_case (spaces replaced with underscores) for column names
+    modelName: 'user', // Define the model name
   }
 );
 
