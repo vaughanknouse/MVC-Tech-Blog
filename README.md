@@ -114,8 +114,8 @@ To use the MVC Tech Blog, follow the following steps:
 2. Enter your user database password.
 3. Create the `blog_db` database by typing the command `\i db/schema.sql` in the terminal.
 4. Close out of the Postgres Shell by entering `\q` in the terminal.
-5. Seed the database by typing the command `npm run seed` in the terminal.
-6. Once your PostgreSQL database is active, navigate to the project directory and start the application locally by typing `npm start` in the terminal.
+5. Seed the database by typing the command `node seeds/seed.js` in the terminal.
+6. Once your PostgreSQL database is active, navigate to the project directory and start the application locally by typing `node server.js` in the terminal.
 7. If everything was installed and runs correctly, you should be able to access the blog locally by navigating to http://localhost:3001/ in your browser.
 8. Once the blog application is accessed, register an account or log in if you already have one in order to create blog posts and comment on other user's posts. 
 9. When the Homepage option is clicked in the navigation, the Homepage with all the existing blog posts including their title, content, author, date created, and comments can be viewed. 
