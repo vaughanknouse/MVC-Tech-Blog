@@ -1,11 +1,20 @@
 [
   {
-    "content": "This post is great! Commenting is so fun."
+    "content": "This post is great!",
+    "date_created": "",
+    "user_id": 2,
+    "post_id": 1
   },
   {
-      "content": "Wow, you are so smart! Awesome post!."
+    "content": "Wow, awesome post!.",
+    "date_created": "",
+    "user_id": 3,
+    "post_id": 2
   },
   {
-      "content": "What a cool thing you just wrote about. Thanks for posting!"
+    "content": "Such a cool post!!",
+    "date_created": "",
+    "user_id": 1,
+    "post_id": 3
   }
 ]

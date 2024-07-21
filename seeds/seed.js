@@ -23,6 +23,7 @@ const seedDatabase = async () => {
   // Loop through each post in postData.json
   for (const post of postData) {
     // Create each post and assign a random user_id from the created users
+    // This simulates different users creating posts
     await Post.create({
       ...post,
       user_id: users[Math.floor(Math.random() * users.length)].id,
@@ -35,6 +36,7 @@ const seedDatabase = async () => {
   // Loop through each comment in commentData.json
   for (const comment of commentData) {
     // Create each comment and assign random user_id and post_id from created users and posts
+    // This simulates different users commenting on different posts
     await Comment.create({
       ...comment,
       user_id: users[Math.floor(Math.random() * users.length)].id,
