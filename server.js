@@ -7,7 +7,6 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const { User, Post, Comment } = require('./models');
 
 // Database configuration with Sequelize
 const sequelize = require('./config/connection');
@@ -27,7 +26,7 @@ const sess = {
     maxAge: 60 * 60 * 1000, // Session cookie expiration time (1 hour)
     httpOnly: true, // Prevents client-side JavaScript from accessing the cookie
     secure: false, // Set to true if using HTTPS (recommended for production)
-    sameSite: 'strict',  // Ensures cookies are sent only for same-site requests
+    sameSite: 'strict', // Ensures cookies are sent only for same-site requests
   },
   resave: false, // Prevents session from being saved back to the store if unmodified
   saveUninitialized: true, // Forces a session to be saved to the store, even if it's new but not modified
@@ -54,5 +53,7 @@ app.use(routes);
 
 // Sync Sequelize models with the database and start the server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));
+  app.listen(PORT, () =>
+    console.log(`Now listening on http://localhost:${PORT}`)
+  );
 });

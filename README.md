@@ -2,9 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-## Description ***
-
-
+## Description \*\*\*
 
 ## Table of Contents
 
@@ -71,6 +69,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 ```
 
 ## Technologies Used
+
 - **Node.js**: JavaScript backend runtime environment for building server-side applications.
 - **Express.js**: Framework for building web applications and handling routes.
 - **Sequelize**: Object-Relational Mapping (ORM) package system for PostgreSQL database management including interacting with the PostgreSQL database, managing models, and handling migrations.
@@ -83,14 +82,13 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 - **dotenv**: Package for managing environment variables.
 - **express-handlebars**: Package to implement Handlebars.js for your Views.
 
-
 ## Features
+
 - **User Authentication**: Secure sign-up, log in, and log out functionality to manage user sessions.
-- **Blog Management**: Users can create, edit, and delete their blog posts easily. 
+- **Blog Management**: Users can create, edit, and delete their blog posts easily.
 - **Comment System**: Users can engage with posts through comments, fostering community interaction.
 - **Dynamic Rendering**: Utilizes Handlebars.js for a responsive and user-friendly interface, rendering blog content dynamically.
 - **Deployment to Render**: Application is deployed to Render, ensuring it is accessibly online for users to engage with the content.
-
 
 ## Installation
 
@@ -105,7 +103,6 @@ To install the MVC Tech Blog, follow the following steps:
 7. To set up environment variables, create a `.env` file in the root directory and update your database credentials correctly.
 8. Ensure that PostgreSQL is installed on your computer to initialize the database.
 
-
 ## Usage
 
 To use the MVC Tech Blog, follow the following steps:
@@ -114,17 +111,16 @@ To use the MVC Tech Blog, follow the following steps:
 2. Enter your user database password.
 3. Create the `blog_db` database by typing the command `\i db/schema.sql` in the terminal.
 4. Close out of the Postgres Shell by entering `\q` in the terminal.
-5. Seed the database by typing the command `node seeds/seed.js` in the terminal.
-6. Once your PostgreSQL database is active, navigate to the project directory and start the application locally by typing `node server.js` in the terminal.
+5. Seed the database by typing the command `npm run seed` in the terminal.
+6. Once your PostgreSQL database is active, navigate to the project directory and start the application locally by typing `npm start` in the terminal.
 7. If everything was installed and runs correctly, you should be able to access the blog locally by navigating to http://localhost:3001/ in your browser.
-8. Once the blog application is accessed, register an account or log in if you already have one in order to create blog posts and comment on other user's posts. 
-9. When the Homepage option is clicked in the navigation, the Homepage with all the existing blog posts including their title, content, author, date created, and comments can be viewed. 
-     - The ability to add a comment to a post is also available on the Homepage when a user is logged in.
+8. Once the blog application is accessed, register an account or log in if you already have one in order to create blog posts and comment on other user's posts.
+9. When the Homepage option is clicked in the navigation, the Homepage with all the existing blog posts including their title, content, author, date created, and comments can be viewed.
+   - The ability to add a comment to a post is also available on the Homepage when a user is logged in.
 10. When the Dashboard option is clicked in the navigation, the Dashboard with any blog posts you created can be viewed along with an option to add a new blog post, edit an existing post, or delete a post.
 11. If the logout button is clicked or you are idle on the site for more than 30 minutes, you will be logged out of the application and redirected to the login page.
 
-
-### Screenshots: ***
+### Screenshots: \*\*\*
 
 The following screenshot demonstrates the application's functionality and appearance:
 
@@ -144,18 +140,15 @@ The following screenshot demonstrates the application's functionality and appear
 
 ![Shows application's ability to comment on an existing blog post.](assets/images/comment-post-screenshot.png)
 
-
 ## Tests
 
 There is no unit testing written for this application.
 
-
-## Links ***
+## Links \*\*\*
 
 GitHub Repository: https://github.com/vaughanknouse/MVC-Tech-Blog
 
-Deployed Application Link: ***
-
+Deployed Application Link: \*\*\*
 
 ## Credits
 
@@ -174,11 +167,9 @@ ChatGPT: https://chatgpt.com/?oai-dm=1
 Also utilized the Xpert Learning Assistant for some portions of my code:
 https://bootcampspot.instructure.com/courses/5293/external_tools/313
 
-
 ## License
 
 This project is licensed under the MIT license. For more information, please visit [this link](https://opensource.org/licenses/MIT).
-
 
 ## Questions
 

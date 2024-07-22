@@ -1,19 +1,19 @@
 [
   {
     "content": "This post is great!",
-    "date_created": "",
+    "date_created": "07/07/2024",
     "user_id": 2,
     "post_id": 1
   },
   {
     "content": "Wow, awesome post!.",
-    "date_created": "",
+    "date_created": "07/08/2024",
     "user_id": 3,
     "post_id": 2
   },
   {
     "content": "Such a cool post!!",
-    "date_created": "",
+    "date_created": "07/09/2024",
     "user_id": 1,
     "post_id": 3
   }
