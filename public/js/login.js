@@ -16,14 +16,18 @@ const loginFormHandler = async (event) => {
 
     // Check if the response from the server is OK (status code 200-299)
     if (response.ok) {
-      // Alert user of successful login
-      alert('Login successful!');
       // Redirect to the home page upon successful login
       document.location.replace('/');
       console.log('logged in');
+      // Alert user of successful login
+      alert('Login successful! Redirecting to homepage...');
     } else {
       // Show an alert message if the login attempt was unsuccessful
       alert('Incorrect username or password. Please try again!');
     }
   }
 };
+
+document
+  .querySelector('.login-btn')
+  .addEventListener('click', loginFormHandler);
