@@ -7,7 +7,7 @@ const addCommentHandler = async (event) => {
   const cardElement = event.target.closest('.card');
 
   // Retrieve the value from the comment text input field and remove any leading or trailing spaces
-  const text = cardElement.querySelector('.comment-text').value.trim();
+  const content = cardElement.querySelector('.comment-text').value.trim();
 
   // Extract the post ID from a hidden element with the ID "post-id" within the same card
   const postId = cardElement.querySelector('#post-id').textContent.trim();
