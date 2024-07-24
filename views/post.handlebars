@@ -1,0 +1,33 @@
+<div class='card mt-5 center-card border-0'>
+  <!-- Main container for the post creation form -->
+  <div class='card-body col-md-6'>
+    <!-- Heading for the post creation form -->
+    <h2 class='d-flex justify-content-center mb-5'>Create a New Post</h2>
+    <!-- Form for creating a new post -->
+    <form class='form'>
+      <!-- Form group for post title input -->
+      <div class='form-group'>
+        <label for='post-title'>Title</label>
+        <!-- Input field for the post title -->
+        <input class='form-control' id='post-title' />
+      </div>
+      <!-- Form group for post text input -->
+      <div class='form-group'>
+        <label for='post-text'>Text</label>
+        <!-- Textarea field for the post content -->
+        <textarea class='form-control' id='post-text' rows='10'></textarea>
+      </div>
+      <!-- Button group for form submission -->
+      <div class='d-flex justify-content-end mb-5'>
+        <!-- Submit button to create a new post -->
+        <button
+          type='click'
+          class='btn btn-primary post-btn btn mt-2'
+        >Post</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Link to the JavaScript file for handling post creation -->
+<script src='/js/post.js'></script>
