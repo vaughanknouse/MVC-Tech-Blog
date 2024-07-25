@@ -36,6 +36,34 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET route to display a single post
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        { model: User, attributes: ['username'] },
+        {
+          model: Comment,
+          attributes: ['id', 'content', 'user_id', 'date_created'],
+          include: { model: User, attributes: ['username'] },
+        },
+      ],
+    });
+
+    const post = postData ? postData.get({ plain: true }) : null;
+    const match = req.session.user_id === post.user_id;
+
+    res.render('post', {
+      ...post,
+      logged_in: req.session.logged_in,
+      match,
+    });
+  } catch (err) {
+    console.error('Error fetching post:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');

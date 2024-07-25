@@ -11,30 +11,23 @@ const addCommentHandler = async (event) => {
 
   // Extract the post ID from a hidden element with the ID "post-id" within the same card
   const postId = cardElement.querySelector('#post-id').textContent.trim();
-  // Convert the post ID to a number
-  const post = Number(postId);
 
-  try {
-    // Make a POST request to the /api/comment endpoint with the comment data
-    const response = await fetch('/api/comment', {
+  if (content && postId) {
+    const response = await fetch(`/api/comments`, {
       method: 'POST',
-      // Convert the comment data to a JSON string
-      body: JSON.stringify({ content, post }),
-      headers: { 'Content-Type': 'application/json' }, // Set the content type to JSON
+      body: JSON.stringify({ content, postId }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
 
-    // Check if the response was successful
     if (response.ok) {
-      // Reload the page to display the newly added comment
+      //document.location.replace(`/post/${postId}`);
       document.location.reload();
+      alert('Comment added!');
     } else {
-      // If the response was not successful, throw an error
-      throw new Error('Failed to comment');
+      alert('Failed to add comment');
     }
-  } catch (error) {
-    // Log the error to the console and show an alert if an error occurs
-    console.error('Error adding comment:', error);
-    alert('Failed to comment!'); // Notify the user of the failure
   }
 };
 
