@@ -2,12 +2,18 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-## Description \*\*\*
+## Description
+
+Tech enthusiasts, developers, and bloggers often seek a centralized, user-friendly platform where they can discover, create, and interact with blog posts in a structured manner. This week’s UT Austin Coding Boot Camp challenge involved building a full-stack Tech Blog application from scratch, utilizing the MVC (Model-View-Controller) paradigm with Node.js, Express.js, Sequelize, Handlebars.js, and PostgreSQL. Designed to cater to developers writing about tech, this CMS-style blog site enables users to publish articles, share opinions, and engage with a community.
+
+The MVC Tech Blog application allows users to create, publish, update, delete, and comment on blog posts, and includes secure sign-up and login features. By leveraging MVC architecture, it offers a well-structured and scalable web development solution. Models are managed with Sequelize, an ORM that interacts with a PostgreSQL database to handle user data, blog posts, and comments. Handlebars.js dynamically renders views, providing a clean and user-friendly interface. Express.js handles routing, request processing, and business logic, ensuring smooth communication between the frontend and backend. User authentication is secured with bcrypt for password hashing and express-session for session management, ensuring safe user interactions and data protection.
+
+In the fast-paced tech industry, keeping up with trends and best practices is essential. Traditional blogging platforms often fall short of meeting the specific needs of tech bloggers. The MVC Tech Blog addresses these gaps by providing a dedicated space for knowledge sharing, showcasing expertise, and facilitating discussions among tech enthusiasts. The platform’s intuitive design simplifies content management, fostering a collaborative environment where users can focus on writing and engaging with others. Features like commenting support meaningful interactions, while robust authentication measures safeguard user data. Ultimately, the MVC Tech Blog aims to empower technology enthusiasts to express their ideas, connect with a broader audience, and contribute to the tech community.
 
 ## Table of Contents
 
 - [MVC Tech Blog](#mvc-tech-blog)
-  - [Description \*\*\*](#description-)
+  - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
