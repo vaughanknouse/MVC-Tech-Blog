@@ -14,7 +14,7 @@
     <header>
     <!--- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Tech Blog</a>
+        <a class="navbar-brand fw-bold text-primary-emphasis fs-3" href="/">Tech Blog</a>
         <!-- Button for toggling the navigation menu on smaller screens -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,12 +25,12 @@
           <ul class="navbar-nav">
             <!-- Home link, active if on the home page -->
             <li class="nav-item {{#if isHome}}active{{/if}}">
-              <a class="nav-link" href="/">Home
+              <a class="nav-link text-primary" href="/">Home
                 <span class="sr-only"></span></a>
             </li>
             <!-- Dashboard link, conditional based on user login status -->
             <li class="nav-item {{#if isDash}}active{{/if}}">
-              <a class="nav-link" {{#if logged_in}}href="/dashboard"{{/if}}{{#unless logged_in}}href="/login"{{/unless}}>Dashboard</a>
+              <a class="nav-link text-primary" {{#if logged_in}}href="/dashboard"{{/if}}{{#unless logged_in}}href="/login"{{/unless}}>Dashboard</a>
             </li>
             <!-- Login link, only shown if user is not logged in -->
             {{#unless logged_in}}
@@ -43,7 +43,7 @@
           <ul class="navbar-nav">
             {{#if logged_in}}
               <li class="nav-item">
-                <button class="nav-link logout btn bg-light" id="logout">Logout</button>
+                <button class="nav-link logout btn bg-secondary text-light" id="logout">Logout</button>
               </li>
             {{/if}}
           </ul>

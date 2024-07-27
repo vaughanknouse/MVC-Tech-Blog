@@ -21,7 +21,7 @@ In the fast-paced tech industry, keeping up with trends and best practices is es
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Screenshots: \*\*\*](#screenshots-)
+    - [Screenshots:](#screenshots)
   - [Tests](#tests)
   - [Links \*\*\*](#links-)
   - [Credits](#credits)
@@ -126,7 +126,7 @@ To use the MVC Tech Blog, follow the following steps:
 10. When the Dashboard option is clicked in the navigation, the Dashboard with any blog posts you created can be viewed along with an option to add a new blog post, edit an existing post, or delete a post.
 11. If the logout button is clicked or you are idle on the site for more than 30 minutes, you will be logged out of the application and redirected to the login page.
 
-### Screenshots: \*\*\*
+### Screenshots:
 
 The following screenshot demonstrates the application's functionality and appearance:
 
@@ -141,6 +141,10 @@ The following screenshot demonstrates the application's functionality and appear
 **Image of the application's Sign Up page:**
 
 ![Shows application's Sign Up page.](assets/images/signup-screenshot.png)
+
+**Image of the application's dashboard with the ability to add a new post when a user is signed in:**
+
+![Shows application's dashboard with the ability to add a new post.](assets/images/dashboard-screenshot.png)
 
 **Image of the application's ability to comment on an existing blog post only when a user is signed in:**
 
