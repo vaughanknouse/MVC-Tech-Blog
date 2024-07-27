@@ -3,7 +3,7 @@
   <div class='container mt-5 col-md-9'>
     <div class='row justify-content-center'>
       <div class='col-md-10'>
-        <!-- Button to create a new post, centered and styled with Bootstrap -->
+        <!-- Button to create a new post -->
         <div class='d-flex justify-content-center mb-5'>
           <a
             class='btn btn-outline-secondary'
@@ -16,12 +16,12 @@
         <!-- Loop through each post in the 'posts' array -->
         {{#each posts}}
           <div class='card mb-4'>
-            <!-- Hidden element to store the post ID for potential use -->
             <div class='d-none' id='post-id'>{{this.id}}</div>
             <div class='card-body'>
-              <!-- Post title and edit button -->
+              <!-- Post title -->
               <div class='d-flex justify-content-between align-items-center'>
                 <h5 class='card-title'>{{title}}</h5>
+                <!-- Post edit/delete link -->
                 <a
                   class='btn-sm btn-outline-secondary edit'
                   type='button'
@@ -33,7 +33,7 @@
               </div>
               <!-- Post content -->
               <p class='card-content'>{{content}}</p>
-              <!-- Footer with posting user and date -->
+              <!-- Footer with posting username and date created -->
               <footer class='blockquote-footer'>Posted by
                 {{user.username}}
                 on

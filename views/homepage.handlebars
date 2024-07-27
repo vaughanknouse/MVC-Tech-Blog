@@ -1,12 +1,11 @@
 <section>
-  <!-- Main container for the page content -->
+  <!-- Main container for the homepage content -->
   <div class="container mt-5 col-md-9">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <!-- Loop through each post in the 'post' array -->
         {{#each post}}
           <div class="card mb-4">
-            <!-- Hidden element to store the post ID -->
             <div class="d-none" id="post-id">{{this.id}}</div>
             <div class="card-body">
               <!-- Display the post title -->
@@ -39,7 +38,7 @@
                     {{#each comments}}
                     <div class="comment-list" id="comment-div">
                       <div class="card-sm card-body">
-                        {{content}}<span class="blockquote-footer">{{username}} on {{format_date date_created}}</span>
+                        {{content}}<span class="blockquote-footer">{{user.username}} on {{format_date date_created}}</span>
                       </div>
                     {{/each}}
                     <!-- Conditional block to show comment input if user is logged in -->
