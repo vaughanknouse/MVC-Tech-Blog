@@ -1,4 +1,3 @@
-// Function to handle adding a new comment
 const addCommentHandler = async (event) => {
   // Prevent the default action of the event, which is usually form submission
   event.preventDefault();
@@ -15,16 +14,34 @@ const addCommentHandler = async (event) => {
   if (content) {
     const response = await fetch(`/api/comments`, {
       method: 'POST',
-      body: JSON.stringify({ content, postId }),
+      body: JSON.stringify({ content, post_id: postId }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.reload();
-      //document.location.replace(`/posts/${postId}`);
-      //document.location.replace('/');
+      const newComment = await response.json();
+
+      // Find the comments section
+      const commentList = cardElement.querySelector('.comment-list');
+
+      // Find the new comment element
+      const commentElement = document.createElement('div');
+      commentElement.classList.add('card-sm', 'card-body');
+      commentElement.innerHTML = `
+      ${newComment.content}
+      <span class="blockquote-footer">${newComment.username} on ${new Date(
+        newComment.date_created
+      ).toLocaleDateString()}</span>
+    `;
+
+      // Append the new comment element to the comment list
+      commentList.appendChild(commentElement);
+
+      // Clear the input field
+      cardElement.querySelector('.comment-content').value = '';
+
       alert('Comment added!');
     } else {
       alert('Failed to add comment');
@@ -33,7 +50,6 @@ const addCommentHandler = async (event) => {
 };
 
 // Add the addCommentHandler function as an event listener to each comment button
-// Select all elements with the class "comment-btn" and attach the event handler
 document.querySelectorAll('.comment-btn').forEach((button) => {
   button.addEventListener('click', addCommentHandler);
 });
