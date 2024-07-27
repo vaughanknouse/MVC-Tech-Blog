@@ -15,11 +15,11 @@ if (process.env.DB_URL) {
   sequelize = new Sequelize(
     process.env.DB_NAME, // The name of the database
     process.env.DB_USER, // The username for the database
-    process.env.DB_PASSWORD, // The password for the database
+    process.env.DB_PW, // The password for the database
     {
       host: 'localhost', // The host of the database server (defaulting to localhost)
       dialect: 'postgres', // The type of database being used (PostgreSQL in this case)
-    },
+    }
   );
 }
 
