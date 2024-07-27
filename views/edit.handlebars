@@ -1,49 +1,43 @@
 <!-- Card container for the Edit Post form -->
-<div class="card mt-5 center-card border-0">
-  <div class="card-body col-md-6">
+<div class='card mt-5 center-card border-0'>
+  <div class='card-body col-md-6'>
     <!-- Heading for the Edit Post page -->
-    <h2 class="d-flex justify-content-center mb-5">Edit Post</h2>
+    <h2 class='d-flex justify-content-center mb-5'>Edit Post</h2>
     <!-- Form for editing a post -->
-    <form class="form">
+    <form class='form'>
       <!-- Hidden input to store the post ID -->
-      <div class="d-none" id="post-id">{{post.id}}</div>
-      
+      <div class='d-none' id='post-id'>{{post.id}}</div>
+
       <!-- Form group for the post title -->
-      <div class="form-group">
-        <label for="post-title">Title</label>
-        <input 
-          class="form-control" 
-          id="post-title" 
-          value="{{post.title}}" 
-        />
+      <div class='form-group'>
+        <label for='post-title'>Title</label>
+        <input class='form-control' id='post-title' value='{{post.title}}' />
       </div>
-      
-      <!-- Form group for the post text -->
-      <div class="form-group">
-        <label for="post-text">Text</label>
+
+      <!-- Form group for the post content -->
+      <div class='form-group'>
+        <label for='post-content'>Content</label>
         <textarea
-          class="form-control"
-          id="post-text"
-          rows="10"
+          class='form-control'
+          id='post-content'
+          rows='10'
         >{{post.content}}</textarea>
       </div>
-      
+
       <!-- Buttons for saving or deleting the post -->
-      <div class="d-flex justify-content-between mb-5">
+      <div class='d-flex justify-content-between mb-5'>
         <!-- Save button -->
         <button
-          type="button" <!-- Changed from 'click' to 'button' -->
-          class="btn btn-success save-btn btn mt-2"
+          type='button'
+          class='btn btn-success save-btn btn mt-2'
         >Save</button>
         <!-- Delete button -->
-        <button
-          type="button" <!-- Changed from 'click' to 'button' -->
-          class="btn btn-danger delete-btn btn mt-2"
-        >Delete Post</button>
+        <button type='button' class='btn btn-danger delete-btn btn mt-2'>Delete
+          Post</button>
       </div>
     </form>
   </div>
 </div>
 
 <!-- Link to external JavaScript file for handling edit functionality -->
-<script src="/js/edit.js"></script>
+<script src='/js/edit.js'></script>

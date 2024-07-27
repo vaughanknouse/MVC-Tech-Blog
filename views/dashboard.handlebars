@@ -28,11 +28,11 @@
                   id='button-addon2'
                   href='/edit/{{id}}'
                 >
-                  Edit
+                  Edit/Delete
                 </a>
               </div>
-              <!-- Post content text -->
-              <p class='card-text'>{{content}}</p>
+              <!-- Post content -->
+              <p class='card-content'>{{content}}</p>
               <!-- Footer with posting user and date -->
               <footer class='blockquote-footer'>Posted by
                 {{user.username}}
@@ -71,7 +71,7 @@
                     <div class='input-group mt-3'>
                       <input
                         type='text'
-                        class='comment-text form-control'
+                        class='comment-content form-control'
                         placeholder='Leave a comment here'
                         aria-label="Recipient's username"
                         aria-describedby='button-addon2'
@@ -93,7 +93,7 @@
                 <div class='input-group mt-3'>
                   <input
                     type='text'
-                    class='comment-text form-control'
+                    class='comment-content form-control'
                     placeholder='Leave a comment here'
                     aria-label="Recipient's username"
                     aria-describedby='button-addon2'

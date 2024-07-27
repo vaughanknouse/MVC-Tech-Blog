@@ -3,12 +3,12 @@ const addPostHandler = async (event) => {
   // Prevent the default form submission behavior
   event.preventDefault();
 
-  // Get the values of the title and text from the form inputs
+  // Get the values of the title and content from the form inputs
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 
   if (title && content) {
-    const response = await fetch(`/api/post`, {
+    const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({ title, content }),
       headers: {

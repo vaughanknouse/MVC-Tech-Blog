@@ -1,11 +1,14 @@
 [
   {
-    "content": "This post is great!"
+    "content": "This post is great!",
+    "date_created": "7/24/2024"
   },
   {
-    "content": "Wow, awesome post!."
+    "content": "Wow, awesome post!",
+    "date_created": "7/23/2024"
   },
   {
-    "content": "Such a cool post!!"
+    "content": "Such a cool post!!",
+    "date_created": "7/25/2024"
   }
 ]

@@ -1,22 +1,19 @@
 // Function to handle editing a post
 const editPostHandler = async (event) => {
-  // Prevent the default action of the event (form submission)
   event.preventDefault();
 
   // Retrieve the values from the form inputs and trim any extra spaces
   const title = document.querySelector('#post-title').value.trim();
-  const text = document.querySelector('#post-text').value.trim();
+  const content = document.querySelector('#post-content').value.trim();
 
   // Get the post ID from a hidden element and convert it to a number
-  const id = document.querySelector('#post-id').textContent.trim();
-  const postId = Number(id);
-  console.log(postId); // Log the post ID for debugging
+  const postId = document.querySelector('#post-id').textContent.trim();
 
   try {
     // Send a PUT request to update the post
-    const response = await fetch(`/api/post/${postId}`, {
+    const response = await fetch(`/api/posts/${postId}`, {
       method: 'PUT',
-      // Include the updated title and text in the request body as a JSON string
+      // Include the updated title and content in the request body as a JSON string
       body: JSON.stringify({ title, content }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -35,6 +32,9 @@ const editPostHandler = async (event) => {
   }
 };
 
+// Add event listeners to the save button
+document.querySelector('.save-btn').addEventListener('click', editPostHandler);
+
 // Function to handle deleting a post
 const deletePostHandler = async (event) => {
   // Prevent the default action of the event (form submission)
@@ -47,7 +47,7 @@ const deletePostHandler = async (event) => {
 
   try {
     // Send a DELETE request to remove the post
-    const response = await fetch(`/api/post/${postId}`, {
+    const response = await fetch(`/api/posts/${postId}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
     });
@@ -66,8 +66,7 @@ const deletePostHandler = async (event) => {
   }
 };
 
-// Add event listeners to the save and delete buttons
-document.querySelector('.save-btn').addEventListener('click', editPostHandler);
+// Add event listeners to the delete button
 document
   .querySelector('.delete-btn')
   .addEventListener('click', deletePostHandler);

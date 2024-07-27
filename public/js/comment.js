@@ -6,8 +6,8 @@ const addCommentHandler = async (event) => {
   // Find the closest parent element with the class "card" to ensure the comment is related to the correct post
   const cardElement = event.target.closest('.card');
 
-  // Retrieve the value from the comment text input field and remove any leading or trailing spaces
-  const content = cardElement.querySelector('.comment-text').value.trim();
+  // Retrieve the value from the comment content input field and remove any leading or trailing spaces
+  const content = cardElement.querySelector('.comment-content').value.trim();
 
   // Extract the post ID from a hidden element with the ID "post-id" within the same card
   const postId = cardElement.querySelector('#post-id').textContent.trim();
@@ -22,8 +22,9 @@ const addCommentHandler = async (event) => {
     });
 
     if (response.ok) {
-      //document.location.replace(`/post/${postId}`);
       document.location.reload();
+      //document.location.replace(`/posts/${postId}`);
+      //document.location.replace('/');
       alert('Comment added!');
     } else {
       alert('Failed to add comment');

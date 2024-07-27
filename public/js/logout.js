@@ -3,7 +3,7 @@ const logout = async () => {
   try {
     // Send a GET request to the /api/users/logout endpoint
     const response = await fetch('/api/users/logout', {
-      method: 'GET',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
 

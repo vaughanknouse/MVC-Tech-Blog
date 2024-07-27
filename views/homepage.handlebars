@@ -11,9 +11,9 @@
             <div class="card-body">
               <!-- Display the post title -->
               <h5 class="card-title">{{title}}</h5>
-              <!-- Display the post content text -->
-              <p class="card-text">{{content}}</p>
-              <!-- Footer with posting user and date -->
+              <!-- Display the post content -->
+              <p class="card-content">{{content}}</p>
+              <!-- Footer with posting username and date created -->
               <footer class="blockquote-footer">Posted by {{user.username}} on {{format_date date_created}}</footer>
 
               <!-- Conditional block to show comments section if comments exist -->
@@ -34,8 +34,10 @@
                   </div>
                   <!-- Collapsible section for comments -->
                   <div class="collapse" id="collapseExample{{@index}}">
+                  <h5>Comments for this post:</h5>
                     <!-- Loop through each comment associated with the post -->
                     {{#each comments}}
+                    <div id="comment-div">
                       <div class="card-sm card-body">
                         {{content}}<span class="blockquote-footer">{{user.username}} on {{format_date date_created}}</span>
                       </div>
@@ -45,7 +47,7 @@
                       <div class="input-group mt-3">
                         <input
                           type="text"
-                          class="comment-text form-control"
+                          class="comment-content form-control"
                           placeholder="Leave a comment here"
                           aria-label="Recipient's username"
                           aria-describedby="button-addon2"
@@ -69,7 +71,7 @@
                   <div class="input-group mt-3">
                     <input
                       type="text"
-                      class="comment-text form-control"
+                      class="comment-content form-control"
                       placeholder="Leave a comment here"
                       aria-label="Recipient's username"
                       aria-describedby="button-addon2"
