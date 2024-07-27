@@ -51,6 +51,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Use routes defined in the controllers module
 app.use(routes);
 
+app.use((req, res, next) => {
+  res.append('Permissions-Policy', 'browsing-topics=()');
+  next();
+});
+
 // Sync Sequelize models with the database and start the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
