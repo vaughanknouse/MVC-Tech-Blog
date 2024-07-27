@@ -12,7 +12,7 @@ const addCommentHandler = async (event) => {
   // Extract the post ID from a hidden element with the ID "post-id" within the same card
   const postId = cardElement.querySelector('#post-id').textContent.trim();
 
-  if (content && postId) {
+  if (content) {
     const response = await fetch(`/api/comments`, {
       method: 'POST',
       body: JSON.stringify({ content, postId }),

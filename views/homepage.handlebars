@@ -36,10 +36,10 @@
                   <div class="collapse" id="collapseExample{{@index}}">
                   <h5>Comments for this post:</h5>
                     <!-- Loop through each comment associated with the post -->
-                    {{#each comments}}
+                    {{#each comments as |comment|}}
                     <div id="comment-div">
                       <div class="card-sm card-body">
-                        {{content}}<span class="blockquote-footer">{{user.username}} on {{format_date date_created}}</span>
+                        {{comment.content}}<span class="blockquote-footer">{{user.username}} on {{format_date comment.date_created}}</span>
                       </div>
                     {{/each}}
                     <!-- Conditional block to show comment input if user is logged in -->
