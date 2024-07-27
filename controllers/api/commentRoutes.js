@@ -33,6 +33,7 @@ router.get('/', async (req, res) => {
   }
 });*/
 
+// CREATE a new comment
 router.post('/', withAuth, async (req, res) => {
   try {
     const { content, post_id } = req.body;

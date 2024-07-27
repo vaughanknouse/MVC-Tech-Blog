@@ -1,7 +1,6 @@
 const loginFormHandler = async (event) => {
-  event.preventDefault(); // Prevents the default form submission behavior
+  event.preventDefault();
 
-  // Retrieve and trim the username and password values from the input fields
   const username = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
@@ -19,10 +18,8 @@ const loginFormHandler = async (event) => {
       // Redirect to the home page upon successful login
       document.location.replace('/');
       console.log('logged in');
-      // Alert user of successful login
       alert('Login successful! Redirecting to homepage...');
     } else {
-      // Show an alert message if the login attempt was unsuccessful
       alert('Incorrect username or password. Please try again!');
     }
   }

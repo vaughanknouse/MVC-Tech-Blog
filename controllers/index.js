@@ -4,8 +4,8 @@
 const router = require('express').Router();
 
 // Import route modules
-const apiRoutes = require('./api'); // Routes for API endpoints (via index.js from 'api' folder)
-const homeRoutes = require('./homeRoutes'); // Routes for home or main application views
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
 
 // When a request is made to the /api route, it will be directed to the index.js in the 'api' folder.
 router.use('/api', apiRoutes);

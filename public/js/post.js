@@ -1,9 +1,7 @@
 // Function to handle the form submission for adding a new post
 const addPostHandler = async (event) => {
-  // Prevent the default form submission behavior
   event.preventDefault();
 
-  // Get the values of the title and content from the form inputs
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 

@@ -9,7 +9,6 @@ const logout = async () => {
 
     // Check if the response status indicates success
     if (response.ok) {
-      // Alert the user that they have been logged out
       alert('You have been logged out. Redirecting to the login page...');
       // Redirect the user to the login page upon successful logout
       document.location.replace('/login');
@@ -18,7 +17,6 @@ const logout = async () => {
       alert(response.statusText);
     }
   } catch (error) {
-    // Handle any errors that occur during the fetch request
     console.error('Error during logout:', error);
   }
 };
@@ -34,9 +32,8 @@ const resetTimer = () => {
   // Clear the existing timer to prevent premature logout
   clearTimeout(timeout);
 
-  // Set a new timer for 30 minutes of inactivity
-  // After 30 minutes, the logout function will be called
-  timeout = setTimeout(logout, 30 * 60 * 1000); // 30 minutes in milliseconds
+  // After 30 minutes (in milliseconds), the logout function will be called
+  timeout = setTimeout(logout, 30 * 60 * 1000);
 };
 
 // Add event listeners to detect user activity

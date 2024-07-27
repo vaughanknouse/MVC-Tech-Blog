@@ -1,14 +1,8 @@
 const addCommentHandler = async (event) => {
-  // Prevent the default action of the event, which is usually form submission
   event.preventDefault();
 
-  // Find the closest parent element with the class "card" to ensure the comment is related to the correct post
   const cardElement = event.target.closest('.card');
-
-  // Retrieve the value from the comment content input field and remove any leading or trailing spaces
   const content = cardElement.querySelector('.comment-content').value.trim();
-
-  // Extract the post ID from a hidden element with the ID "post-id" within the same card
   const postId = cardElement.querySelector('#post-id').textContent.trim();
 
   if (content) {

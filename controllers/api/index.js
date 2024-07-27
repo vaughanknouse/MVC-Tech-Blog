@@ -4,9 +4,9 @@
 const router = require('express').Router();
 
 // Import route modules
-const userRoutes = require('./userRoutes'); // Routes for user-related operations
-const postRoutes = require('./postRoutes'); // Routes for post-related operations
-const commentRoutes = require('./commentRoutes'); // Routes for comment-related operations
+const userRoutes = require('./userRoutes');
+const postRoutes = require('./postRoutes');
+const commentRoutes = require('./commentRoutes');
 
 // When a request is made to the /users path, it will be directed to the index.js in the /users folder.
 router.use('/users', userRoutes);
