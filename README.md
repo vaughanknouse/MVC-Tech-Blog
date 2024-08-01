@@ -23,7 +23,7 @@ In the fast-paced tech industry, keeping up with trends and best practices is es
   - [Usage](#usage)
     - [Screenshots:](#screenshots)
   - [Tests](#tests)
-  - [Links \*\*\*](#links-)
+  - [Links](#links)
   - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
@@ -154,7 +154,7 @@ The following screenshot demonstrates the application's functionality and appear
 
 There is no unit testing written for this application.
 
-## Links \*\*\*
+## Links
 
 GitHub Repository: https://github.com/vaughanknouse/MVC-Tech-Blog
 
