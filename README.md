@@ -158,7 +158,7 @@ There is no unit testing written for this application.
 
 GitHub Repository: https://github.com/vaughanknouse/MVC-Tech-Blog
 
-Deployed Application Link: \*\*\*
+Deployed Application Link: https://mvc-tech-blog-hlde.onrender.com/
 
 ## Credits
 
